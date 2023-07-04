@@ -88,10 +88,10 @@ console.log(scores)
 // Schrijf een script die e-mailadressen genereert voor al onze medewerkers. Sla dit op in een nieuwe property "email" die je toevoegt aan iedere medewerker.
 
 const NOVIEmployees = [
-    {firstName: 'Nova', lastName: 'Eeken'},
-    {firstName: 'Sam', lastName: 'Barnhoorn'},
-    {firstName: 'Tessa', lastName: 'Steur'},
-    {firstName: 'Mark', lastName: 'Rensen'},
+    {firstName: 'Nova', lastName: 'Eeken', email: ""},
+    {firstName: 'Sam', lastName: 'Barnhoorn', email: ""},
+    {firstName: 'Tessa', lastName: 'Steur', email: ""},
+    {firstName: 'Mark', lastName: 'Rensen', email: ""}, //email toegevoegd i.v.m. scope
 ];
 
 
@@ -108,12 +108,10 @@ const NOVIEmployees = [
 
 
 for (let i = 0; i < NOVIEmployees.length; i++) {
-    NOVIEmployees[i].email = NOVIEmployees[i].firstName + "." +  NOVIEmployees[i].lastName + "@novi.nl";
+   NOVIEmployees[i].email = NOVIEmployees[i].firstName + "." +  NOVIEmployees[i].lastName + "@novi.nl";
+   NOVIEmployees[i].email = NOVIEmployees[i].email.toLowerCase();
 }
 console.log(NOVIEmployees);
-
-
-
 
 
 // Opdracht 2-BONUS
